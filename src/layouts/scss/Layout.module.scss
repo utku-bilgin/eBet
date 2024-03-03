@@ -1,0 +1,30 @@
+.contaier{
+    height: 100px;
+    width: 852px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1px;
+    margin: 2px 0 10px 0;
+
+    .btn {
+        width: 120px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+        background-color: green;
+    }
+
+    .btn:hover{
+        background-color: #2a2d33;
+        
+    }
+
+    .icon {
+        font-size: 50px;
+        color: var(--color-text);
+    }
+}

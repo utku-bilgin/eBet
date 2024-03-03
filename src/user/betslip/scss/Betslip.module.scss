@@ -1,0 +1,213 @@
+.container {
+  position: relative;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  gap: 1px;
+  // right: 100px;
+  // bottom: 50px;
+  width: 240px;
+  height: 820px;
+  margin: 1px;
+  // background-color: var(--color-line);
+  backdrop-filter: blur(8px);
+
+  .header {
+    padding: 4px 0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid green;
+
+    .header_title {
+      font-size: 16px;
+    }
+
+    .header_lenght {
+      width: 20px;
+      height: 20px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 12px;
+      font-weight: bold;
+      background-color: var(--color-marker);
+      color: var(--color-betslip-text);
+    }
+  }
+
+  .matchs {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    gap: 2px;
+    height: 500px;
+    overflow-y: hidden;
+
+    .match {
+      display: flex;
+      position: relative;
+      justify-content: start;
+      align-items: start;
+      flex-direction: column;
+      width: 100%;
+      height: 50px;
+      background-color: var(--color-betslip-bg);
+    }
+
+    .match_delete {
+      position: absolute;
+      right: 4px;
+      top: 4px;
+      width: 14px;
+      height: 14px;
+      border-radius: 14px;
+      padding: 2px;
+      font-size: 12px;
+      background-color: red;
+      cursor: pointer;
+    }
+
+    .team {
+      width: 100%;
+      height: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 12px;
+      color: var(--color-betslip-text);
+    }
+
+    .time {
+      display: flex;
+      font-size: 10px;
+      > div {
+        color: var(--color-betslip-text);
+      }
+    }
+
+    .rate {
+      display: flex;
+      font-size: 10px;
+      > div {
+        color: var(--color-betslip-text);
+      }
+    }
+  }
+
+  .footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 170px;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    gap: 2px;
+
+    .betslipInfo {
+      width: 100%;
+      height: 50px;
+      display: flex;
+      gap: 2px;
+
+      .maxRate {
+        width: 50%;
+        height: 50px;
+        background-color: var(--color-bg);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .totalRate {
+        width: 50%;
+        height: 50px;
+        background-color: var(--color-bg);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 4px;
+
+        .totalRate_select {
+          width: 80px;
+          height: 24px;
+          font-size: 16px;
+          border: 1px solid var(--color-bg);
+          background-color: var(--color-bg);
+          text-align: center;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .betslipPiece {
+      width: 100%;
+      height: 34px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: var(--color-bg);
+
+      .betslipPiece_select {
+        width: 80px;
+        height: 24px;
+        font-size: 16px;
+        border: 1px solid green;
+        background-color: green;
+        text-align: center;
+        cursor: pointer;
+      }
+    }
+
+    .maxWin {
+      width: 100%;
+      height: 34px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: var(--color-bg);
+    }
+
+    .betslipNavigation {
+      width: 100%;
+      height: 36px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      .btn {
+        width: 24px;
+        height: 24px;
+        padding: 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
+        cursor: pointer;
+        background-color: var(--color-bg);
+      }
+
+      .playNow {
+        padding: 2px 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
+        cursor: pointer;
+        background-color: var(--color-bg);
+      }
+    }
+  }
+}

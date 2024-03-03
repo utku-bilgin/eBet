@@ -1,0 +1,81 @@
+.container{
+    height: 60px;
+    width: 852px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: 12px;
+    background-color: green;
+
+    > div {
+        border-right: 1px solid #000;
+        height: 100%;
+        color: var(--color-text);
+        font-weight: bold;
+    }
+
+   
+
+    > div:last-child {
+        border-right: none;
+    }
+    
+
+    .team{
+        width: 230px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mbs{
+        width: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .matchResult{
+        width: 140px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .upsideDown{
+        width: 90px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .HandicapMatchOutcome{
+        width: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .doubleChance{
+        width: 140px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .BothTeamsScore{
+        width: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Info{
+        width: 38px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+}

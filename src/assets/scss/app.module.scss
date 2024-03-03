@@ -1,0 +1,44 @@
+:root {
+  --color-bg: green;
+  --color-line: #393E46;
+  --color-marker: #EBF400;
+  --color-text: #EEEEEE;
+  --color-line2: #24d102;
+  --color-betslip-bg: #EEEEEE;
+  --color-betslip-text: #222831;
+
+
+
+
+  --color-dark: #363636;
+
+  --card-border-radius: 2rem;
+  --border-radius-1: 0.4rem;
+  --border-radius-2: 0.8rem;
+  --border-radius-3: 1.2rem;
+
+  --card-padding: 1.8rem;
+  --padding-1: 1.2rem;
+
+  --box-shadow: 0 2rem 3rem var(--color-danger);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  appearance: none;
+  border: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  
+  color: var(--color-text);
+}
+.container{
+  // background-color: var(--color-bg);
+  background-image: url('../img/area.jpg');
+  background-size: cover; 
+  background-position: center;
+}
+

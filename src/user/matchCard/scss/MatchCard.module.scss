@@ -1,0 +1,137 @@
+.contaier{
+    height: 58px;
+    width: 852px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-top: 1px;
+    // margin-bottom: 6px;
+    font-size: 12px;
+    border-bottom: 1px solid var( --color-line);
+    // border-radius: 10px;
+    
+    // > div {
+    //     border-right: 1px solid #000;
+    //     height: 100%;
+    // }
+
+    // > div:last-child {
+    //     border-right: none;
+    // }
+
+    // > div:first-child {
+    //     border-right: none;
+    // }
+
+    .team{
+        width: 160px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        flex-direction: column;
+        padding: 0 8px;
+        gap: 10px;
+    }
+
+    .time{
+        width: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        flex-direction: column;
+        gap: 6px;
+        font-size: 10px;
+    }
+
+    .mbs{
+        width: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 10px;
+    }
+
+    .matchResult{
+        width: 140px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2px;
+    }
+
+    .upsideDown{
+        width: 90px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2px;
+    }
+
+    .HandicapMatchOutcome{
+        width: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 10px;
+    }
+
+    .doubleChance{
+        width: 140px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2px;
+    }
+
+
+
+    .BothTeamsScore{
+        width: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 10px;
+    }
+
+    .Info{
+        width: 38px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 10px;
+    }
+
+    .select{
+        transition: background-color 0.3s ease;
+        width: 34px;
+        height: 34px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .select:hover{
+        background-color: var(--color-marker);
+        border-radius: 2px;
+        cursor: pointer;
+
+        > div{
+            color: var(--color-bg);
+        }
+        
+    }
+
+    .active{
+        background-color: var(--color-marker);
+        border-radius: 2px;
+        cursor: pointer;
+
+        > div{
+            color: var(--color-bg);
+        }
+    }
+    
+}
