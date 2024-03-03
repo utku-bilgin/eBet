@@ -35,7 +35,6 @@ interface Match {
 const MatchCard: React.FC<Props> = ({ match }) => {
   
   const betslipContext = useBetslipContext();
-  const matchesNID = useBetslipContext();
   const addToBetslip = betslipContext.addToBetslip;
   const [activeIndex, setIsActiveIndex] = useState(-1)
   const [NIDBet, setNIDBet] = useState<any>()

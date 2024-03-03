@@ -1,4 +1,3 @@
-import React from "react";
 import style from "../scss/Layout.module.scss";
 import { FaFutbol, FaUsers, FaNewspaper, FaThumbsUp } from "react-icons/fa";
 
