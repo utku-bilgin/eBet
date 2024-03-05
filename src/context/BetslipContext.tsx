@@ -1,33 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
 
-// interface Match {
-//   LN: string;
-//   NID: number;
-//   D: string;
-//   DAY: string;
-//   T: string;
-//   N: string;
-//   OCG: {
-//     [key: string]: {
-//       ID: string;
-//       N: string;
-//       MBS: string;
-//       SO: number;
-//       OC: {
-//         [key: string]: {
-//           G: string;
-//           ID: string;
-//           IMF: boolean;
-//           MBS: string;
-//           N: string;
-//           O: string;
-//           OD: number;
-//         };
-//       };
-//     };
-//   };
-// }
-
 interface Odd {
   LN: string;
   NID: number;

@@ -4,4 +4,4 @@
 
 
 
-<img src="./src/assets/img/eBet.png" alt="web" style="height: 600;">
+<img src="eBet.png" alt="web" style="height: 600;">

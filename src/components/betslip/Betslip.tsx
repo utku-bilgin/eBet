@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import style from "../scss/Betslip.module.scss";
-import { useBetslipContext } from "../../../context/BetslipContext";
+import style from "./Betslip.module.scss";
+import { useBetslipContext } from "../../context/BetslipContext";
 import { FaBan, FaSave, FaEllipsisH } from "react-icons/fa";
 
 const Betslip = () => {
@@ -10,17 +10,19 @@ const Betslip = () => {
   const maxRate = betslip.maxRate;
   const [selectedRate, setSelectedRate] = useState<number>(1);
   const [selectedPiece, setSelectedPiece] = useState<number>(1);
-  const [maxWin, setMaxWin] = useState<number>()
+  const [maxWin, setMaxWin] = useState<number>();
+  const [numbers, setNumbers] = useState<number[]>([]);
+  const [pieces, setPieces] = useState<number[]>([]);
 
-  const numbers = [];
-  for (let i = 1; i <= 1000; i++) {
-    numbers.push(i);
-  }
 
-  const pieces = [];
-  for (let i = 1; i <= 251; i++) {
-    pieces.push(i);
-  }
+
+  useEffect (() => {
+    const number = Array.from({ length: 1000 }, (_, i) => i+1)
+    setNumbers(number)
+  
+    const piece = Array.from({ length: 250 }, (_, i) => i+1)
+      setPieces(piece)
+  })
 
   const handleSelectChangeRate = (event: any) => {
     setSelectedRate(event.target.value);

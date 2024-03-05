@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router";
 import UserRoutes from "./routes/UserRoutes";
 import { MatchProvider } from "./context/MatchContext";
-import style from "./assets/scss/app.module.scss";
+import style from "./App.module.scss";
 import { BetslipProvider } from "./context/BetslipContext";
 
 function App() {

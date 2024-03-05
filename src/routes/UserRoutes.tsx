@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router";
-import MatchList from "../user/matchList/components/MatchList";
+import MatchList from "../pages/matchList/MatchList";
 
 const UserRoutes = () => {
   return (

@@ -1,4 +1,4 @@
-import style from "../scss/Layout.module.scss";
+import style from "./Layout.module.scss";
 import { FaFutbol, FaUsers, FaNewspaper, FaThumbsUp } from "react-icons/fa";
 
 const Layout = () => {

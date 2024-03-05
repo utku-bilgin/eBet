@@ -1,4 +1,4 @@
-import style from "../scss/MatchListHeader.module.scss";
+import style from "./MatchListHeader.module.scss";
 import { FaInfo } from "react-icons/fa";
 
 const MatchListHeader = () => {

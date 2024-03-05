@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
-import style from "../scss/MatchCard.module.scss";
-import { useBetslipContext } from "../../../context/BetslipContext";
+import style from "./MatchCard.module.scss";
+import { useBetslipContext } from "../../context/BetslipContext";
 
 type Props = { match: Match | any };
 

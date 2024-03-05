@@ -1,10 +1,10 @@
-import { useMatchContext } from "../../../context/MatchContext";
-import MatchCard from "../../matchCard/components/MatchCard";
-import MatchListHeader from "../../matchListHeader/components/MatchListHeader";
-import style from "../scss/MatchList.module.scss";
+import { useMatchContext } from "../../context/MatchContext.tsx";
+import MatchCard from "../../components/matchCard/MatchCard.tsx";
+import MatchListHeader from "../../components/matchListHeader/MatchListHeader.tsx";
+import style from "./MatchList.module.scss";
 import { Virtuoso } from "react-virtuoso";
-import Layout from "../../../layouts/components/Layout.tsx";
-import Betslip from "../../betslip/components/Betslip.tsx";
+import Layout from "../../layouts/Layout.tsx";
+import Betslip from "../../components/betslip/Betslip.tsx";
 
 const MatchList = () => {
   const matches = useMatchContext();
