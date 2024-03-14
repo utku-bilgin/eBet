@@ -5,10 +5,11 @@ import style from "./MatchList.module.scss";
 import { Virtuoso } from "react-virtuoso";
 import Layout from "../../layouts/Layout.tsx";
 import Betslip from "../../components/betslip/Betslip.tsx";
+import { FaSpinner } from "react-icons/fa";
 
 const MatchList = () => {
   const matches = useMatchContext();
-
+  // const matches = null;
   return (
     <div className={style.contaier}>
       <Layout />
@@ -16,7 +17,7 @@ const MatchList = () => {
       <div className={style.main}>
         <div>
           <MatchListHeader />
-          <Virtuoso
+          {matches.length !== 0 ? <Virtuoso
             className={style.virtuoso}
             style={{ height: 760 }}
             data={matches}
@@ -27,7 +28,8 @@ const MatchList = () => {
                 </div>
               );
             }}
-          />
+          /> : <div className={style.loading} ><FaSpinner className={style.loadingicon}/></div> }
+          
         </div>
 
         <Betslip />
