@@ -5,7 +5,7 @@
     justify-content: start;
     align-items: center;
     font-size: 12px;
-    background-color: green;
+    background-color: var(--color-bg);
 
     > div {
         border-right: 1px solid #000;
@@ -26,6 +26,21 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+        .teaminput{
+            width: 90%;
+            height: 80%;
+            background-color: transparent;
+            color: var(--color-text);
+            padding-left: 10px;
+            font-size: 12px;
+            font-weight: bold;
+            border: 1px solid var(--color-marker);
+        }
+
+        .teaminput::placeholder{
+            color: var(--color-marker);
+        }
     }
 
     .mbs{

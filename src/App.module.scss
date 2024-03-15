@@ -1,7 +1,7 @@
 :root {
-  --color-bg: green;
+  --color-bg: #114232;
   --color-line: #393E46;
-  --color-marker: #EBF400;
+  --color-marker: #FFC700;
   --color-text: #EEEEEE;
   --color-line2: #24d102;
   --color-betslip-bg: #EEEEEE;
@@ -36,7 +36,7 @@
   color: var(--color-text);
 }
 .container{
-  background-image: url('./assets/images/area.jpg');
+  background-image: url('./assets/images/bg001.jpg');
   background-size: cover; 
   background-position: center;
 }

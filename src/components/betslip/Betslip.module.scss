@@ -8,7 +8,7 @@
   // right: 100px;
   // bottom: 50px;
   width: 240px;
-  height: 820px;
+  height: 760px;
   margin: 1px;
   // background-color: var(--color-line);
   backdrop-filter: blur(8px);
@@ -20,15 +20,17 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border-bottom: 1px solid green;
+    border-bottom: 1px solid var(--color-bg);
 
     .header_title {
       font-size: 16px;
+      color: var(--color-marker);
+      font-weight: bold;
     }
 
     .header_lenght {
-      width: 20px;
-      height: 20px;
+      width: 22px;
+      height: 22px;
       border-radius: 10px;
       display: flex;
       justify-content: center;
@@ -40,6 +42,10 @@
     }
   }
 
+  .matchs::-webkit-scrollbar {
+    width: 0;
+  }
+
   .matchs {
     width: 100%;
     display: flex;
@@ -48,7 +54,7 @@
     flex-direction: column;
     gap: 2px;
     height: 500px;
-    overflow-y: hidden;
+    overflow-y: scroll;
 
     .match {
       display: flex;
@@ -57,46 +63,89 @@
       align-items: start;
       flex-direction: column;
       width: 100%;
-      height: 50px;
-      background-color: var(--color-betslip-bg);
-    }
+      height: 60px;
+      background-color: var(--color-marker);
 
-    .match_delete {
-      position: absolute;
-      right: 4px;
-      top: 4px;
-      width: 14px;
-      height: 14px;
-      border-radius: 14px;
-      padding: 2px;
-      font-size: 12px;
-      background-color: red;
-      cursor: pointer;
-    }
+      .match_delete {
+        position: absolute;
+        right: 4px;
+        top: 4px;
+        width: 14px;
+        height: 14px;
+        border-radius: 14px;
+        padding: 2px;
+        font-size: 12px;
+        background-color: red;
+        cursor: pointer;
+      }
 
-    .team {
-      width: 100%;
-      height: 24px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 12px;
-      color: var(--color-betslip-text);
-    }
-
-    .time {
-      display: flex;
-      font-size: 10px;
-      > div {
+      .team {
+        width: 100%;
+        height: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+        font-weight: bold;
         color: var(--color-betslip-text);
       }
-    }
 
-    .rate {
-      display: flex;
-      font-size: 10px;
-      > div {
-        color: var(--color-betslip-text);
+      .detail {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .time {
+          width: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: start;
+          flex-direction: column;
+          gap: 2px;
+          padding-left: 8px;
+          font-size: 11px;
+          font-weight: bold;
+
+          .timeD {
+            font-size: 14px;
+            color: var(--color-betslip-text);
+          }
+
+          .timeDetail {
+            display: flex;
+            gap: 8px;
+            font-size: 14px;
+
+            > div {
+              color: var(--color-betslip-text);
+            }
+          }
+        }
+
+        .rate {
+          width: 50%;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          font-size: 14px;
+          > div {
+            color: var(--color-betslip-text);
+          }
+
+          .rateODD {
+            border: 1px solid var(--color-bg);
+            width: 40px;
+            height: 28px;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
       }
     }
   }
@@ -164,8 +213,8 @@
         width: 80px;
         height: 24px;
         font-size: 16px;
-        border: 1px solid green;
-        background-color: green;
+        border: 1px solid var(--color-bg);
+        background-color: var(--color-bg);
         text-align: center;
         cursor: pointer;
       }

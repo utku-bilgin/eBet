@@ -1,10 +1,34 @@
+import { useState, useEffect } from "react";
 import style from "./MatchListHeader.module.scss";
 import { FaInfo } from "react-icons/fa";
+import { useMatchContext } from "../../context/MatchContext";
 
 const MatchListHeader = () => {
+  const {SearchedMatches} = useMatchContext();
+  const [search, setSearch] = useState("");
+
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const value = event.target.value;
+    setSearch(value);
+  };
+
+  useEffect(() => {
+    SearchedMatches(search);
+  }, [search])
+
+
   return (
     <div className={style.container}>
-      <div className={style.team}>Lig ya da maç giriniz</div>
+      <div className={style.team}>
+        <input
+          className={style.teaminput}
+          type="text"
+          value={search}
+          placeholder="Lig ya da maç giriniz"
+          onChange={handleInputChange}
+        />
+        
+      </div>
       <div className={style.mbs}>MBS</div>
       <div className={style.matchResult}>Maç Sonucu</div>
       <div className={style.upsideDown}>2,5 Gol</div>

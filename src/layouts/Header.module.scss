@@ -1,0 +1,137 @@
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    flex-direction: column;
+
+    .main{
+        width: 100%;
+        height: 68px;
+        background-color: var(--color-marker);
+        display: flex;
+        justify-content: center ;
+        align-items: center;
+
+        .article{
+            width: 1100px;
+            height: 68px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .logo{
+                height: 68px;
+            }
+
+            .login{
+                display: flex;
+                gap: 20px;
+
+                .user{
+                    height: 30px;
+                    width: 220px;
+                    font-size: 20px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: #2a2d33;
+                    border-radius: 10px;
+                    
+
+                    .loginIcon{
+                        margin: 0 8px;
+                        background-color: var(--color-line);
+                    }
+
+                    .userNameInput{
+                        height: 100%;
+                        width: 100%;
+                        color: var(--color-a);
+                        background-color: var(--color-line);
+                        border-radius: 8px;
+                        padding-left: 10px;
+                        font-weight: bold;
+                    }
+
+                }
+
+                .rememberMe{
+                    width: 140px;
+                    height: 30px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 8px;
+                    
+
+                    .checkbox{
+                        width: 20px;
+                        height: 20px;
+                        background-color: var(--color-text);
+                        border: 1px solid var(--color-line);
+                        border-radius: 3px;
+                    }
+
+                    .label{
+                        color: #2a2d33;
+                        font-weight: bold;
+                    }
+                }
+
+                .loginbtn{
+                    width: 100px;
+                    height: 30px;
+                    border-radius: 8px;
+                    background-color: var(--color-bg);
+                    font-weight: bold;
+                    transition: background-color 0.3s ease;
+                }
+
+                .loginbtn:hover{
+
+                    background-color: transparent;
+                    border: 1px solid var(--color-bg);
+                    color: var(--color-bg)
+                }
+            }
+        }
+    }
+
+    
+
+  
+
+    .navigation{
+        height: 100px;
+        width: 1100px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 3px;
+        margin: 4px 0 10px 0;
+    
+        .btn {
+            width: 120px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 10px;
+            background-color: var(--color-bg);
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+    
+        .btn:hover{
+            background-color: var(--color-marker);
+            
+        }
+    
+        .icon {
+            font-size: 50px;
+            color: var(--color-text);
+        }
+    }
+}

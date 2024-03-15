@@ -3,24 +3,26 @@ import MatchCard from "../../components/matchCard/MatchCard.tsx";
 import MatchListHeader from "../../components/matchListHeader/MatchListHeader.tsx";
 import style from "./MatchList.module.scss";
 import { Virtuoso } from "react-virtuoso";
-import Layout from "../../layouts/Layout.tsx";
+import Header from "../../layouts/Header.tsx";
 import Betslip from "../../components/betslip/Betslip.tsx";
 import { FaSpinner } from "react-icons/fa";
+import Footer from "../../layouts/Footer.tsx";
 
 const MatchList = () => {
-  const matches = useMatchContext();
+  const {filteredMatched} = useMatchContext();
+  
   // const matches = null;
   return (
     <div className={style.contaier}>
-      <Layout />
-
+      <Header />
+      
       <div className={style.main}>
         <div>
           <MatchListHeader />
-          {matches.length !== 0 ? <Virtuoso
+          {filteredMatched.length !== 0 ? <Virtuoso
             className={style.virtuoso}
-            style={{ height: 760 }}
-            data={matches}
+            style={{ height: 700 }}
+            data={filteredMatched}
             itemContent={(index, match) => {
               return (
                 <div key={index}>
@@ -34,6 +36,7 @@ const MatchList = () => {
 
         <Betslip />
       </div>
+      <Footer />
     </div>
   );
 };

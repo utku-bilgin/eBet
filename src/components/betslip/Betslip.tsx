@@ -14,15 +14,13 @@ const Betslip = () => {
   const [numbers, setNumbers] = useState<number[]>([]);
   const [pieces, setPieces] = useState<number[]>([]);
 
+  useEffect(() => {
+    const number = Array.from({ length: 1000 }, (_, i) => i + 1);
+    setNumbers(number);
 
-
-  useEffect (() => {
-    const number = Array.from({ length: 1000 }, (_, i) => i+1)
-    setNumbers(number)
-  
-    const piece = Array.from({ length: 250 }, (_, i) => i+1)
-      setPieces(piece)
-  })
+    const piece = Array.from({ length: 250 }, (_, i) => i + 1);
+    setPieces(piece);
+  });
 
   const handleSelectChangeRate = (event: any) => {
     setSelectedRate(event.target.value);
@@ -36,14 +34,12 @@ const Betslip = () => {
     clearBetslip();
     setSelectedRate(0);
     setSelectedPiece(0);
-  }
+  };
 
-  useEffect (() => {
-    const win = parseFloat((selectedRate*selectedPiece*maxRate).toFixed(2));
+  useEffect(() => {
+    const win = parseFloat((selectedRate * selectedPiece * maxRate).toFixed(2));
     setMaxWin(win);
-  }, [maxRate, selectedRate, selectedPiece])
-
-
+  }, [maxRate, selectedRate, selectedPiece]);
 
   return (
     <div className={style.container}>
@@ -62,14 +58,18 @@ const Betslip = () => {
               onClick={() => clearSelectedMatch(item.odd.NID)}
             />
             <div className={style.team}>{item.odd.N}</div>
-            <div className={style.time}>
-              <div>{item.odd.D}</div>
-              <div>{item.odd.DAY}</div>
-              <div>{item.odd.T}</div>
-            </div>
-            <div className={style.rate}>
-              <div>{item.odd.Ogc}</div>
-              <div>{item.odd.Odd}</div>
+            <div className={style.detail}>
+              <div className={style.time}>
+                <div className={style.timeD}>{item.odd.D}</div>
+                <div className={style.timeDetail}>
+                  <div>{item.odd.DAY}</div>
+                  
+                </div>
+              </div>
+              <div className={style.rate}>
+                <div>{item.odd.Ogc}</div>
+                <div className={style.rateODD}>{item.odd.Odd}</div>
+              </div>
             </div>
           </div>
         ))}
@@ -100,16 +100,16 @@ const Betslip = () => {
             <div>Kupun Adeti</div>
           </div>
           <select
-              value={selectedPiece}
-              onChange={handleSelectChangePiece}
-              className={style.betslipPiece_select}
-            >
-              {pieces.map((piece, index) => (
-                <option key={index} value={piece}>
-                  {piece} Adet
-                </option>
-              ))}
-            </select>
+            value={selectedPiece}
+            onChange={handleSelectChangePiece}
+            className={style.betslipPiece_select}
+          >
+            {pieces.map((piece, index) => (
+              <option key={index} value={piece}>
+                {piece} Adet
+              </option>
+            ))}
+          </select>
         </div>
         <div className={style.maxWin}>
           <div>Maks. Kazanç :</div>
