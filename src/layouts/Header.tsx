@@ -18,7 +18,7 @@ const Layout = () => {
         <div className={style.article}>
           <img
             className={style.logo}
-            src="./src/assets/images/logo003.jpg"
+            src="./src/assets/images/logo.jpg"
             alt=""
           />
           <div className={style.login}>

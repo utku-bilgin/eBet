@@ -9,4 +9,4 @@
 👨‍💻 Bu projeyi paylaşmaktan heyecan duyuyorum ve geri bildiriminizi bekliyorum!
 
 
-<img src="./src/assets/images/readme001.png" alt="web" style="height: 600;">
+<img src="./src/assets/images/readme.png" alt="web" style="height: 600;">
